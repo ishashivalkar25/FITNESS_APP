@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.fitnessapp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/accountDetails"
+        android:name="com.example.fitnessapp.AccountDetails"
+        android:label="fragment_account_details"
+        tools:layout="@layout/fragment_account_details" />
+    <fragment
+        android:id="@+id/mentalWellness"
+        android:name="com.example.fitnessapp.MentalWellness"
+        android:label="fragment_mental_wellness"
+        tools:layout="@layout/fragment_mental_wellness" />
+    <fragment
+        android:id="@+id/reminders"
+        android:name="com.example.fitnessapp.Reminders"
+        android:label="fragment_reminders"
+        tools:layout="@layout/fragment_reminders" />
+    <fragment
+        android:id="@+id/logout"
+        android:name="com.example.fitnessapp.Logout"
+        android:label="fragment_logout"
+        tools:layout="@layout/fragment_logout" />
+</navigation>
