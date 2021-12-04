@@ -14,21 +14,26 @@
     <fragment
         android:id="@+id/accountDetails"
         android:name="com.example.fitnessapp.AccountDetails"
-        android:label="fragment_account_details"
+        android:label="@string/menu_account_details"
         tools:layout="@layout/fragment_account_details" />
     <fragment
         android:id="@+id/mentalWellness"
         android:name="com.example.fitnessapp.MentalWellness"
-        android:label="fragment_mental_wellness"
+        android:label="@string/menu_mental_wellness"
         tools:layout="@layout/fragment_mental_wellness" />
     <fragment
         android:id="@+id/reminders"
         android:name="com.example.fitnessapp.Reminders"
-        android:label="fragment_reminders"
+        android:label="@string/menu_reminders"
         tools:layout="@layout/fragment_reminders" />
     <fragment
         android:id="@+id/logout"
         android:name="com.example.fitnessapp.Logout"
-        android:label="fragment_logout"
+        android:label="@string/menu_logout"
         tools:layout="@layout/fragment_logout" />
+    <fragment
+        android:id="@+id/reset2"
+        android:name="com.example.fitnessapp.Reset"
+        android:label="@string/menu_reset"
+        tools:layout="@layout/fragment_reset" />
 </navigation>

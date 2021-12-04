@@ -7,44 +7,39 @@
     tools:context=".ui.home.HomeFragment">
 
 
-    <Button
-        android:id="@+id/Calorie_tracker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:id="@+id/workout_tracker"
+        android:layout_width="181dp"
+        android:layout_height="154dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="88dp"
-        android:text="Calorie Tracker"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calorie_tracker" />
+
+    <ImageButton
+        android:id="@+id/water_tracker"
+        android:layout_width="181dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="76dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile"
+        app:layout_constraintStart_toEndOf="@+id/calorie_tracker"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/calorie_tracker"
+        android:layout_width="181dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="76dp"
+        android:src="@drawable/profile"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/Water_tracker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="88dp"
-        android:text="Water Tracker"
-        app:layout_constraintStart_toEndOf="@+id/Calorie_tracker"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/Workout_tracker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Workout Tracker"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Calorie_tracker" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toEndOf="@+id/Workout_tracker"
-        app:layout_constraintTop_toBottomOf="@+id/Water_tracker" />
 </androidx.constraintlayout.widget.ConstraintLayout>
