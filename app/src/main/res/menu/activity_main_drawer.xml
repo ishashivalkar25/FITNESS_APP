@@ -24,7 +24,6 @@
             android:id="@+id/reset2"
             android:icon="@drawable/ic_baseline_360_24"
             android:title="@string/menu_reset" />
-
         <item
             android:id="@+id/logout"
             android:icon="@drawable/ic_baseline_exit_to_app_24"

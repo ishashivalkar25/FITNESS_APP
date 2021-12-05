@@ -36,4 +36,14 @@
         android:name="com.example.fitnessapp.Reset"
         android:label="@string/menu_reset"
         tools:layout="@layout/fragment_reset" />
+    <fragment
+        android:id="@+id/dietPlan"
+        android:name="com.example.fitnessapp.DietPlan"
+        android:label="@string/menu_diet_plan"
+        tools:layout="@layout/fragment_diet_plan" />
+    <fragment
+        android:id="@+id/report"
+        android:name="com.example.fitnessapp.Report"
+        android:label="@string/menu_report"
+        tools:layout="@layout/fragment_report" />
 </navigation>
