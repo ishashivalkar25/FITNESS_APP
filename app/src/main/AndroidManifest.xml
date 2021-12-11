@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FITNESSAPP">
+        <activity android:name=".FoodCategoryContentActivity"></activity>
         <activity
             android:name=".profile_activity"
             android:label="@string/title_activity_profile"
-            android:theme="@style/Theme.FITNESSAPP.NoActionBar"></activity>
+            android:theme="@style/Theme.FITNESSAPP.NoActionBar" />
         <activity android:name=".forgot_password_activity" />
         <activity android:name=".sign_up_activity" />
         <activity android:name=".MainActivity">

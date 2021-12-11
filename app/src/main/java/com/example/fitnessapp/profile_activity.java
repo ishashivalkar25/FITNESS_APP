@@ -62,12 +62,7 @@ public class profile_activity extends AppCompatActivity {
         BottomNavigationView bottom_nav_bar = findViewById(R.id.bottom_nav_bar);
         NavigationUI.setupWithNavController(bottom_nav_bar,navController);
 
-//        bottom_nav_bar.setOnItemSelectedListener(new TabLayout.OnTabSelectedListener() {
-//            @Override
-//            public void onItemSelected(final int position) {
-//                // the user selected a new tab
-//            }
-//        });
+
     }
 
     @Override
