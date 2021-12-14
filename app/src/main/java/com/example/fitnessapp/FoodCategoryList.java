@@ -3,9 +3,9 @@ package com.example.fitnessapp;
 public class FoodCategoryList {
 
     private String food_category ;
-    float calculated_cal,total_cal;
+    double calculated_cal,total_cal;
 
-    public FoodCategoryList(String food_category, float calculated_cal, float total_cal) {
+    public FoodCategoryList(String food_category, double calculated_cal, double total_cal) {
         this.food_category = food_category;
         this.calculated_cal = calculated_cal;
         this.total_cal = total_cal;
@@ -19,7 +19,7 @@ public class FoodCategoryList {
         this.food_category = food_category;
     }
 
-    public float getCalculated_cal() {
+    public double getCalculated_cal() {
         return calculated_cal;
     }
 
@@ -27,7 +27,7 @@ public class FoodCategoryList {
         this.calculated_cal = calculated_cal;
     }
 
-    public float getTotal_cal() {
+    public double getTotal_cal() {
         return total_cal;
     }
 

@@ -3,12 +3,15 @@ package com.example.fitnessapp;
 public class FoodItem {
 
     String name , description ;
-    float cal_present;
+    long cal_present;
 
-    public FoodItem(String name, String description, float cal_present) {
+    public FoodItem(String name, String description, long cal_present) {
         this.name = name;
         this.description = description;
         this.cal_present = cal_present;
+    }
+
+    public FoodItem() {
     }
 
     public String getName() {
@@ -27,11 +30,11 @@ public class FoodItem {
         this.description = description;
     }
 
-    public float getCal_present() {
+    public long getCal_present() {
         return cal_present;
     }
 
-    public void setCal_present(float cal_present) {
+    public void setCal_present(long cal_present) {
         this.cal_present = cal_present;
     }
 

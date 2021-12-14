@@ -1,27 +1,84 @@
 package com.example.fitnessapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.util.Log;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-
 public class FoodCategoryContentActivity extends AppCompatActivity {
 
     RecyclerView recyclerView ;
     MyFoodItemAdapter myFoodItemAdapter;
     LinearLayoutManager linearLayoutManager;
     ArrayList<FoodItem> foodItemsList ;
+    FirebaseFirestore db;
+    ProgressDialog progressDialog;
+    String food_category;
+    long total_calories;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_category_content);
-        initData();
+
+        food_category = getIntent().getStringExtra("Food_Category");
+
+        Log.i("food_category",food_category.toString());
+
+
+
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Fetching Data ....");
+        progressDialog.show();
+
+        foodItemsList = new ArrayList<FoodItem>();
+        db = FirebaseFirestore.getInstance();
+
         initRecyclerView();
+        fetchData();
+
+    }
+
+    private void fetchData()
+    {
+        db.collection(food_category).get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            if(progressDialog.isShowing())
+                            {
+                                progressDialog.dismiss();
+                            }
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                foodItemsList.add(document.toObject(FoodItem.class));
+                                myFoodItemAdapter.notifyDataSetChanged();
+                            }
+                        } else {
+                            if(progressDialog.isShowing())
+                            {
+                                progressDialog.dismiss();
+                            }
+                            Log.w("Error", "Error getting documents.", task.getException());
+                        }
+                    }
+                });
+
+
     }
 
     private void initRecyclerView() {
@@ -34,11 +91,11 @@ public class FoodCategoryContentActivity extends AppCompatActivity {
         myFoodItemAdapter.notifyDataSetChanged();
     }
 
-    private void initData() {
-        foodItemsList = new ArrayList<FoodItem>();
-        foodItemsList.add(new FoodItem("Idli","1.0 Serve",100));
-        foodItemsList.add(new FoodItem("Idli","1.0 Serve",100));
-        foodItemsList.add(new FoodItem("Idli","1.0 Serve",100));
-        foodItemsList.add(new FoodItem("Idli","1.0 Serve",100));
-    }
+//    @Override
+//    public void onBackPressed() {
+//
+//        Intent intent = new Intent();
+//        intent.putExtra("total_calories", total_calories);
+//        setResult(resultcode, intent);
+//    }
 }

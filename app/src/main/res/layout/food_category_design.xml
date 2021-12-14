@@ -4,31 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:padding="10dp"
+    android:padding="5dp"
+    android:background="@color/design_default_color_primary"
     android:layout_margin="5dp"
     android:elevation="36dp"
     >
 
     <TextView
         android:id="@+id/Food_category_name"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
-        android:textSize="20dp"
+        android:layout_marginStart="15dp"
         android:background="@drawable/card_background"
+        android:text="TextView"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/calories_cal"
-        android:layout_width="wrap_content"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="24dp"
         android:text="TextView"
-        android:textSize="20dp"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Food_category_name"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,8 +40,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/calories_cal"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="24dp"
         android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:cardCornerRadius="30dp"
         >
 

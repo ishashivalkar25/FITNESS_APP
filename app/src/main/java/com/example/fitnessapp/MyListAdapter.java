@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.foodListHolder> {
 
@@ -25,6 +26,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.foodListHo
 
     public MyListAdapter(ArrayList<FoodCategoryList> foodCategoryListItem) {
         this.foodCategoryListItem = foodCategoryListItem;
+
     }
 
     @NonNull
@@ -40,19 +42,18 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.foodListHo
     public void onBindViewHolder(@NotNull MyListAdapter.foodListHolder holder, int position) {
 
         String food_category= foodCategoryListItem.get(position).getFood_category();
-        float total_cal= foodCategoryListItem.get(position).getTotal_cal();
-        float calculated_cal= foodCategoryListItem.get(position).getTotal_cal();
+        double total_cal= foodCategoryListItem.get(position).getTotal_cal();
+        double calculated_cal= foodCategoryListItem.get(position).getCalculated_cal();
         holder.setData(food_category,calculated_cal,total_cal);
 
-        add_from_category.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Report fragment = new Report();
-
-                Intent intent = new Intent(mContext,FoodCategoryContentActivity.class);
-                mContext.startActivity(intent);
-            }
-        });
+//        add_from_category.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(mContext,FoodCategoryContentActivity.class);
+//                intent.putExtra("Food_Category",)
+//                mContext.startActivity(intent);
+//            }
+//        });
     }
 
     @Override
@@ -71,10 +72,18 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.foodListHo
             cal_text=view.findViewById(R.id.calories_cal);
             add_from_category=view.findViewById(R.id.add_items_of_category);
             mContext=view.getContext();
-
+            add_from_category.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext,FoodCategoryContentActivity.class);
+                    intent.putExtra("Food_Category",food_category_text.getText());
+                    intent.setType("plain/text");
+                    mContext.startActivity(intent);
+                }
+            });
         }
 
-        public void setData(String food_category, float calculated_cal, float total_cal) {
+        public void setData(String food_category, double calculated_cal, double total_cal) {
             food_category_text.setText(food_category);
             cal_text.setText(calculated_cal + " of " +  total_cal +" cal");
         }

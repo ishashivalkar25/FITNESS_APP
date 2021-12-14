@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DietPlan extends Fragment {
     RecyclerView recyclerView ;
@@ -52,10 +53,10 @@ public class DietPlan extends Fragment {
 
     private void initData() {
         foodCategoryListItem = new ArrayList<FoodCategoryList>();
-        foodCategoryListItem.add(new FoodCategoryList("Break Fast",0,100));
-        foodCategoryListItem.add(new FoodCategoryList("Break Fast",0,100));
-        foodCategoryListItem.add(new FoodCategoryList("Break Fast",0,100));
-        foodCategoryListItem.add(new FoodCategoryList("Break Fast",0,100));
+        foodCategoryListItem.add(new FoodCategoryList("Breakfast",0,100));
+        foodCategoryListItem.add(new FoodCategoryList("Lunch",0,100));
+        foodCategoryListItem.add(new FoodCategoryList("Evening Snacks",0,100));
+        foodCategoryListItem.add(new FoodCategoryList("Dinner",0,100));
     }
 
     @Override
