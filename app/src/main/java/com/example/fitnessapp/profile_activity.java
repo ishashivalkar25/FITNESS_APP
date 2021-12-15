@@ -1,9 +1,14 @@
 package com.example.fitnessapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.ImageButton;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -19,13 +24,14 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fitnessapp.databinding.ActivityProfileBinding;
-import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class profile_activity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityProfileBinding binding;
     private  DrawerLayout drawer;
+    FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +43,7 @@ public class profile_activity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
+        firebaseAuth = FirebaseAuth.getInstance();
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,6 +71,11 @@ public class profile_activity extends AppCompatActivity {
 
 
     }
+    private void Logout(){
+        firebaseAuth.signOut();
+        finish();
+        startActivity(new Intent(profile_activity.this, MainActivity.class));
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -77,6 +89,15 @@ public class profile_activity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_profile);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.logoutMenu:{
+                Logout();
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void onBackPressed(){

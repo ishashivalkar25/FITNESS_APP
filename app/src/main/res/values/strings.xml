@@ -21,4 +21,15 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="exercise1">
+    \nStep 1: Lie on your back with your knees bent, feet flat on the floor, and your arms extended by your sides.\n\n
+    Step 2: Pushing through your feet and bracing your core, raise your bottom off the ground until your hips are fully extended, squeezing your glutes at the top.\n\n
+    Step 3: Slowly return to the starting position and repeat.\n
+</string>
+    <string name="bridge">
+    Activate your core and posterior chain.\nThis is a great exercise to use as a warmup.
+</string>
+    <string name="header">
+    Whether the gym isn’t your thing or you’re short on time, clear out a space in the living room and prepare to sweat!!
+</string>
 </resources>

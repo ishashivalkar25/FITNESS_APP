@@ -4,42 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.home.HomeFragment"
+    android:background="@drawable/homebackg">
 
 
     <ImageButton
-        android:id="@+id/workout_tracker"
-        android:layout_width="181dp"
-        android:layout_height="154dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/water_tracker_btn"
+        android:layout_width="185dp"
+        android:layout_height="163dp"
         android:scaleType="fitXY"
-        android:src="@drawable/profile"
+        android:src="@drawable/water_tracker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.226"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calorie_tracker" />
-
-    <ImageButton
-        android:id="@+id/water_tracker"
-        android:layout_width="181dp"
-        android:layout_height="154dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="76dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/profile"
-        app:layout_constraintStart_toEndOf="@+id/calorie_tracker"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.921" />
 
     <ImageButton
         android:id="@+id/calorie_tracker"
-        android:layout_width="181dp"
-        android:layout_height="154dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="76dp"
-        android:src="@drawable/profile"
+        android:layout_width="185dp"
+        android:layout_height="163dp"
+        android:layout_marginBottom="40dp"
         android:scaleType="fitXY"
+        android:src="@drawable/calorie_tracker"
+        app:layout_constraintBottom_toTopOf="@+id/water_tracker_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/workout"
+        android:layout_width="185dp"
+        android:layout_height="163dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/workout"
+        app:layout_constraintBottom_toTopOf="@+id/calorie_tracker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.225" />
 
+    <TextView
+        android:id="@+id/workout_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Workout"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.311" />
 
+    <TextView
+        android:id="@+id/calorie_tracker_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calorie Tracker"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.311"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.66" />
 
+    <TextView
+        android:id="@+id/water_tracker_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Water Tracker"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.991" />
 </androidx.constraintlayout.widget.ConstraintLayout>
