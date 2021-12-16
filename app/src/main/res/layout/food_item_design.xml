@@ -36,24 +36,35 @@
         android:id="@+id/calorie_present"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-
+        android:layout_marginStart="10dp"
+        android:textAlignment="viewEnd"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/item_name"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.562" />
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/cal_string"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textSize="15dp"
+        android:text="Cal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calorie_present"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/add_card_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="30dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/calorie_present"
+        app:layout_constraintStart_toEndOf="@+id/cal_string"
         app:layout_constraintTop_toTopOf="parent"
         >
+
         <ImageView
             android:id="@+id/add_item_in_count"
             android:layout_width="30dp"
@@ -71,11 +82,12 @@
         app:layout_constraintStart_toEndOf="@+id/add_card_view"
         app:layout_constraintTop_toTopOf="parent"
         >
+
         <ImageView
             android:id="@+id/delete_item_from_count"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            app:srcCompat="@drawable/minus_sign"/>
+            app:srcCompat="@drawable/minus_sign" />
 
     </androidx.cardview.widget.CardView>
 

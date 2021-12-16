@@ -19,18 +19,17 @@ import com.example.fitnessapp.databinding.FragmentHomeBinding;
 
 public class MentalWellness extends Fragment {
 
-    private FragmentHomeBinding binding;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-        TextView tip1 = root.findViewById(R.id.tip1);
-        TextView tip2 = root.findViewById(R.id.tip2);
-        TextView tip3 = root.findViewById(R.id.tip3);
-        TextView tip4 = root.findViewById(R.id.tip4);
-        TextView tip5 = root.findViewById(R.id.tips5);
-        TextView tip6 = root.findViewById(R.id.tip6);
+        View view = inflater.inflate( R.layout.fragment_mental_wellness, container, false);
+        TextView tip1 = view.findViewById(R.id.tip1);
+        TextView tip2 = view.findViewById(R.id.tip2);
+        TextView tip3 = view.findViewById(R.id.tip3);
+        TextView tip4 = view.findViewById(R.id.tip4);
+        TextView tip5 = view.findViewById(R.id.tips5);
+        TextView tip6 = view.findViewById(R.id.tip6);
 
         tip1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,12 +79,8 @@ public class MentalWellness extends Fragment {
                 startActivity(intent);
             }
         });
-        return root;
+        return view;
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
-    }
+
 }

@@ -6,46 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".DietPlan">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/total_calories_text_2"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-        android:textAlignment="center"
-        android:background="@color/teal_700"
-        >
-
-        <TextView
-            android:id="@+id/total_calories_counted_2"
-            android:layout_width="125dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="96dp"
-            android:text="Calorie Count"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:text="0.0"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/total_calories_counted_2"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:scrollbars="vertical"
-        app:layout_constraintTop_toBottomOf="@id/total_calories_text_2"/>
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

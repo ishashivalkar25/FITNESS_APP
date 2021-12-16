@@ -11,6 +11,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -19,7 +24,10 @@ public class MyFoodItemAdapter extends RecyclerView.Adapter<MyFoodItemAdapter.It
 
     private ArrayList<FoodItem> foodItemsList;
     private long total_calories=0;
-
+    FirebaseFirestore db;
+    FirebaseAuth firebaseAuth;
+    String userID;
+    User user;
     public MyFoodItemAdapter(ArrayList<FoodItem> foodItemsList) {
         this.foodItemsList = foodItemsList;
     }
@@ -40,6 +48,17 @@ public class MyFoodItemAdapter extends RecyclerView.Adapter<MyFoodItemAdapter.It
         String item_description = foodItemsList.get(position).getDescription();
         long item_calorie_present = foodItemsList.get(position).getCal_present();
         holder.setData(item_name,item_description,item_calorie_present);
+        firebaseAuth=FirebaseAuth.getInstance();
+        db=FirebaseFirestore.getInstance();
+        userID=firebaseAuth.getCurrentUser().getUid();
+        db.collection("userData").document(userID).get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(@NonNull @NotNull DocumentSnapshot documentSnapshot) {
+                        user = documentSnapshot.toObject(User.class);
+                    }
+                });
+
     }
 
     @Override
@@ -49,7 +68,7 @@ public class MyFoodItemAdapter extends RecyclerView.Adapter<MyFoodItemAdapter.It
 
     class ItemHolder extends RecyclerView.ViewHolder{
 
-        TextView IName, IDescription, ICalPresent;
+        TextView IName, IDescription, ICalPresent,total_calorie_present;
         ImageView add_item_in_count,delete_item_from_count;
 
         public ItemHolder(@NonNull @NotNull View itemView) {
@@ -62,14 +81,21 @@ public class MyFoodItemAdapter extends RecyclerView.Adapter<MyFoodItemAdapter.It
             add_item_in_count.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    total_calories += Long.parseLong(ICalPresent.getText().toString());
-
+                   total_calories=user.getTotal_calories();
+                   total_calories += Long.parseLong(ICalPresent.getText().toString());
+                    user.setTotal_calories(total_calories);
+                    db.collection("userData").document(userID).set(user);
+                    Log.i("total_calories",total_calories+"");
                 }
             });
             delete_item_from_count.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    total_calories=user.getTotal_calories();
                     total_calories -= Long.parseLong(ICalPresent.getText().toString());
+                    user.setTotal_calories(total_calories);
+                    db.collection("userData").document(userID).set(user);
+                    Log.i("total_calories",total_calories+"");
                 }
             });
         }
@@ -77,7 +103,7 @@ public class MyFoodItemAdapter extends RecyclerView.Adapter<MyFoodItemAdapter.It
         public void setData(String item_name, String item_description, long item_calorie_present) {
             IName.setText(item_name);
             IDescription.setText(item_description);
-            ICalPresent.setText(item_calorie_present+" Cal");
+            ICalPresent.setText(item_calorie_present+"");
             //Log.i("data123",item_name+" "+item_description+" "+item_calorie_present);
         }
 

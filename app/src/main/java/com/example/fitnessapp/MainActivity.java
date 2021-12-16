@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 if(task.isSuccessful()){
                     progressDialog.dismiss();
                     //Log.i("loginAuth",userName + " "+ Password+ " 1");
-                    startActivity(new Intent(MainActivity.this, profile_activity.class));
+                    startActivity(new Intent(MainActivity.this, GetAccountDetails.class));
                     Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                 }else
                 {

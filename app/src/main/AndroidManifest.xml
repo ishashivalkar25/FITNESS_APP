@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.fitnessapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,6 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FITNESSAPP">
         <activity
+            android:name=".GetAccountDetails"
+            android:exported="false" />
+        <activity
+            android:name=".HomeFragment"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".help"
+            android:exported="false" />
+        <activity
+            android:name=".calorie_tracker_page"
+            android:exported="false" />
+        <activity
             android:name=".water_tracker"
             android:exported="false" />
         <activity android:name=".FoodCategoryContentActivity" />
@@ -19,6 +33,84 @@
             android:name=".profile_activity"
             android:label="@string/title_activity_profile"
             android:theme="@style/Theme.FITNESSAPP.NoActionBar" />
+        <activity
+            android:name=".Day7Activity"
+            android:exported="true" />
+        <activity
+            android:name=".Day6Activity"
+            android:exported="true" />
+        <activity
+            android:name=".CompletionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RestdayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Day3Activity"
+            android:exported="true" />
+        <activity
+            android:name=".Day1Activity"
+            android:exported="true" />
+        <activity
+            android:name=".KneelingsideplankActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SupermanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".GetupsquatActivity"
+            android:exported="true" />
+        <activity
+            android:name=".WalkinglungeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PushupActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SquatActivity"
+            android:exported="true" />
+        <activity
+            android:name=".KneepushupActivity"
+            android:exported="true" />
+        <activity
+            android:name=".WallsquatActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BicyclecrunchActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SlhaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ForearmplankActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BirddogActivity"
+            android:exported="true" />
+        <activity
+            android:name=".StldkActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PtddActivity"
+            android:exported="true" />
+        <activity
+            android:name=".StationaryLungeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity_chairsquat"
+            android:exported="true" />
+        <activity
+            android:name=".Day2Activity"
+            android:exported="true" />
+        <activity
+            android:name=".DaysActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity_bridge"
+            android:exported="true" />
+        <activity
+            android:name=".WorkoutActivity"
+            android:exported="true" />
         <activity android:name=".forgot_password_activity" />
         <activity android:name=".sign_up_activity" />
         <activity android:name=".MainActivity">

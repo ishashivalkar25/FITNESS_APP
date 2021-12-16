@@ -22,14 +22,211 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="exercise1">
-    \nStep 1: Lie on your back with your knees bent, feet flat on the floor, and your arms extended by your sides.\n\n
-    Step 2: Pushing through your feet and bracing your core, raise your bottom off the ground until your hips are fully extended, squeezing your glutes at the top.\n\n
-    Step 3: Slowly return to the starting position and repeat.\n
-</string>
+        \nStep 1: Lie on your back with your knees bent, feet flat on the floor, and your arms extended by your sides.\n\n
+        Step 2: Pushing through your feet and bracing your core, raise your bottom off the ground until your hips are fully extended, squeezing your glutes at the top.\n\n
+        Step 3: Slowly return to the starting position and repeat.\n
+    </string>
     <string name="bridge">
-    Activate your core and posterior chain.\nThis is a great exercise to use as a warmup.
-</string>
+        Activate your core and posterior chain.\nThis is a great exercise to use as a warmup.
+    </string>
     <string name="header">
-    Whether the gym isn’t your thing or you’re short on time, clear out a space in the living room and prepare to sweat!!
-</string>
+        Whether the gym isn’t your thing or you’re short on time, clear out a space in the living room and prepare to sweat!!
+    </string>
+
+    <string name="stationarylunge">
+        Hit your quads, hamstrings, and glutes with a stationary lunge.
+    </string>
+    <string name="exercise_sl">
+        \nStep 1:Split your stance with your right leg in front. Your right foot should be flat on the ground, and your left foot should be up on its toes.\n\nStep 2: Bend your knees and lunge, stopping when your right thigh is parallel to the ground.\n\nStep 3: Push up through your right foot to return to the starting position. Repeat for desired number of reps, then switch legs.
+    </string>
+
+    <string name="chairsquat">
+        Squat to strengthen your legs and core, which will make everyday movements easier.\n Starting with a chair underneath you will help you master proper form.
+    </string>
+    <string name="exercise_cs">
+        Step 1: Stand in front of the chair with your feet shoulder-width apart, toes pointed slightly out.\n\n
+Step 2: Hinging at your hips and bending your knees, lower back and down until your bottom touches the chair, allowing your arms to extend out in front of you.\n\n
+Step 3: Push up through your heels and return to the starting position.
+    </string>
+
+    <string name="kneepushup">
+        A beginner-style pushup, this move will help you build strength before attempting a standard pushup.
+    </string>
+    <string name="exercise_kp">
+        Step 1:Get into a high plank position from your knees.\n\n
+Step 2: Maintaining a straight line from your head to your knees, bend your elbows to lower yourself down to the ground. Keep your elbows at a 45-degree angle.\n\n
+Step 3: Push back up to start.
+    </string>
+
+
+    <string name="PlanktoDownwardDog">
+        This move will test your upper body, especially your shoulders.
+    </string>
+    <string name="exercise_ptdd">
+        Step 1: Get into a high plank position, with your hands stacked underneath your shoulders and your feet close together.\n\n
+Step 2: Keeping your core engaged and your hands and feet stationary, pike your hips up and back into the Downward Dog pose. Your body should form a triangle with the ground. Keep your neck neutral. Your gaze should be directed toward your feet.\n\n
+Step 3: Hold here for a second, then return to the plank. Repeat.
+    </string>
+
+    <string name="Straightlegdonkeykick">
+     Build those glutes with donkey kicks!!
+    </string>
+    <string name="exercise_sldk">
+     Step 1: Get on all fours, with your hands aligned with your shoulders and your knees aligned with your hips.\n\n
+Step 2: Keeping your back straight, push your right foot out to the imaginary wall behind you while keeping your leg straight.\n\n
+Step 3: Your foot should remain flexed (toes pointing down to the floor) throughout. Take care to keep your hips square to the ground. Squeeze your buttocks at the top.\n\n
+Step 4: Return to the starting position. Repeat for the desired number of reps. Repeat on the other leg.
+    </string>
+
+    <string name="BirdDog">
+    A full-body move that requires balance and stability, the Bird Dog pose is easily scalable to your ability level. Start with this version if you’re a beginner.
+    </string>
+    <string name="exercise_bd">
+Step 1: Get on all fours, ensuring your hands are directly underneath your shoulders and your knees are underneath your hips.\n\n
+Step 2: Keeping your neck neutral, simultaneously extend your left arm and right leg, keeping your hips square to the ground. Pause here for 2 seconds.\n\n
+Step 3: Return to the start position. Repeat with your right arm and left leg.
+    </string>
+
+    <string name="Forearmplank">
+A full-body exercise that requires strength and balance, planks put the core into overdrive.
+    </string>
+    <string name="exercise_fp">
+Step 1: Assume a plank position on your forearms. Your body should form a straight line from head to feet.\n\n
+Step 2: Ensure your lower back and hips don’t sag. Hold the position for 30 seconds to 1 minute.
+    </string>
+
+    <string name="Sidelyinghipabduction">
+You may not think about strengthening your hip muscles until they start to bother you, but please reconsider!\nThis is especially the case if you sit all day. Counteracting that with hip-targeting movements will be very beneficial.
+    </string>
+    <string name="exercise_slha">
+Step 1: Lie on your left side, with your left leg straight, right leg straight, and right foot resting on the ground.\n\n
+Step 2: Lift your right leg up, maintaining the position of your body. Make sure your hips don’t open up.\n\n
+Step 3: Return to the start position. Repeat for the desired number of reps, then do the other side.
+    </string>
+
+    <string name="Bicyclecrunch">
+Although you’ll work your core with almost all of these strength exercises, a targeted ab move doesn’t hurt.
+    </string>
+    <string name="exercise_bc">
+Step 1: Lie on your back and bring your legs to a tabletop position. Bend your elbows, and put your hands behind your head.\n\n
+Step 2: Crunch up and bring your right elbow to your left knee, straightening your right leg.\n\n
+Step 3: Release the crunch slightly. Bend your right leg and straighten your left leg, then bring your left elbow to your right knee.\n\n
+Step 4: Repeat for the desired number of reps.
+    </string>
+
+    <string name="Singlelegbridge">
+    Any time you take an exercise to a single leg, you’ll automatically make it harder.
+    </string>
+    <string name="exercise_slb">
+        Step 1: Lie on your back with your knees bent, feet flat on the floor, and your arms extended by your sides.\n\n
+Step 2: Pushing through your feet and bracing your core, raise your bottom off the ground until your hips are fully extended, squeezing your glutes at the top.\n\n
+Step 3: Slowly return to the starting position and repeat.\n\n
+        Step 4: Lift one foot off the ground while keeping your leg bent for an intermediate challenge.\n\n
+        Step 5: Complete the same number of reps on each side.
+    </string>
+
+    <string name="Squat">
+   Taking out the chair allows you to master the form of a regular bodyweight squat.
+    </string>
+    <string name="exercise_s">
+        Step 1: Stand with your feet shoulder-width apart or slightly wider. Extend your hands straight out in front of you to help keep your balance. You can also hold your hands at chest level or place them behind your head.\n\n
+Step 2: Bend at your knees and hips, sticking your butt out like you are sitting into an imaginary chair. Keep your chest lifted and your spine neutral, and protect your lower back by not rounding your spine.\n\n
+Step 3: Keep your head and chest lifted to prevent your spine from rounding. Lower your hips so your knees are over your ankles. Make sure to keep your weight back into your heels to avoid too much pressure on the knees.\n\n
+Step 4: Keep your body tight, and push through your heels, focusing on using your glutes to bring yourself back to the starting position in order to reduce strain on your lower back. This counts as one rep.\n\n
+    </string>
+
+    <string name="Pushup">
+A standard pushup is the more challenging version of a knee pushup
+    </string>
+    <string name="exercise_p">
+Step 1: Start in a plank position on the floor, with hands firmly on the floor, right under your shoulders. Press toes firmly into the floor too.\n\n
+Step 2: Keep core tight and back flat and engage your glutes and hamstrings. Your whole body should be neutral and in a straight line.\n\n
+Step 3: Lift hips up and back until your body forms an inverted V shape. Keep arms and legs as straight as possible.\n\n
+Step 4: Start to bend elbows, and then lower your entire upper body toward the floor.\n\n
+Step 5: Stay there for a moment, then slowly push back up until your arms are straight and you’re in the inverted V position. Make sure you maintain control throughout the movement.
+    </string>
+
+    <string name="Walkinglunge">
+By traveling instead of staying stationary in a lunge, you’ll add aspects of stability, mobility, and balance.
+    </string>
+    <string name="exercise_wl">
+Step 1: Start with your feet together and step forward, lunging with your right leg.\n\nStep 2: Stand up, then repeat with your left leg.
+    </string>
+
+    <string name="Pikepushups">
+Adding a pushup to your pike will target those shoulders even more. The movement here is all in the arms, so keep the rest of your body stable.
+    </string>
+    <string name="exercise_pp">
+To perform, assume a pike position and bend at the elbows — allowing them to flare out to the sides — directing the top of your head toward the ground.
+    </string>
+
+    <string name="Getupsquat">
+Get-up squats are great for time under tension, or keeping your legs and glutes under continuous work, which adds to the burn.
+    </string>
+    <string name="exercise_gus">
+Step 1: Drop down into a squat position. You won’t stand at all during this move.\n\n
+Step 2: Drop your knees down to the ground one at a time so you’re kneeling.\n\n
+Step 3: Step your feet back to the ground one at a time, maintaining that squat position.\n\n
+Step 4: Repeat as quickly as you can while maintaining good form.
+    </string>
+
+    <string name="Superman">
+Work your lower back — and the whole backside of your body — with a superman. Go as slowly as you can here to really reap the benefits of this move.
+    </string>
+    <string name="exercise_sm">
+Step 1: Lie on your stomach, arms and legs extended.\n\n
+Step 2: Keeping your neck neutral, recruit your core and the back of your body to simultaneously raise your arms and legs up and off the ground as high as they’ll go.\n\n
+Step 3: Pause for 1 second at the top, and slowly lower back to the start position.
+    </string>
+
+    <string name="Plankwithalternatingleglift">
+Adding a leg lift to a regular plank makes you unstable, requiring your core to work in overdrive and your three limbs to support more weight.
+    </string>
+    <string name="exercise_pwoll">
+Lift one leg up, hold for 5 seconds, and return it to the ground. Repeat with the other leg.
+    </string>
+
+    <string name="Kneelingsideplank">
+Holding your body up with your knee and your extended arm during a hip abduction makes this move an upper body exercise, too. Plus, it recruits the core even more.
+    </string>
+    <string name="exercise_ksp">
+Step 1: Lie on your right side, legs extended and stacked from hip to feet. The elbow of your right arm is directly under your shoulder. Ensure your head is directly in line with your spine. Your left arm can be aligned along the left side of your body.\n\n
+Step 2: Engage your abdominal muscles, drawing your navel toward your spine.\n\n
+Step 3: Lift your hips and knees from the mat while exhaling. Your torso is straight in line with no sagging or bending. Hold the position.\n\n
+Step 4: After several breaths, inhale and return to the starting position. The goal should be to hold for 60 seconds. Change sides and repeat.
+    </string>
+
+    <string name="Deadbug">
+Activate those deep core muscles with a dead bug.
+    </string>
+    <string name="exercise_db">
+Step 1: Start lying on your back, legs at tabletop, and arms extended in front of you.\n\n
+Step 2: In a coordinated motion, extend your left leg and drop your right arm above your head, taking care that your lower back stays flat to the ground.\n\n
+Step 3: Bring your leg back to tabletop and your arm in front of you, then repeat with the opposite arm and leg.
+    </string>
+
+    <string name="wallsquat">
+        The wall squat exercise is a real quad burner, working the muscles in the front of your thighs.\nThis exercise is generally used for building isometric strength and endurance in the quadriceps muscle group, glutes, and calves.
+    </string>
+
+    <string name="exercise_ws">
+        Step 1: Stand with your back pressing against a wall.\n\n
+Step 2: Slide downward into a squat position by moving your feet forward until your knees make a 90-degree angle and your hamstrings are parallel to the floor.\n\n
+Step 3: Hold this move as long as you can.
+    </string>
+    <string name="restday">
+        You should rest today\n
+        Resting is just as important as working out, because it is an equal part of total process required to boost energy.
+    </string>
+
+    <string name="sign_up_text"> SIGN UP:\nEnter all the required credentials needed to use the app.</string>
+    <string name="log_in_text"> LOG IN:\nEnter username/email and password to login.</string>
+    <string name="workout_text"> WORKOUT:\nThis module has a 7 days workout routine. Each day has name of the exercises to be done along with the instructions of how to do it. This also has a timer of 30 seconds for each exercise along with the associated functionalities.</string>
+    <string name="calorie_tracker_text"> CALORIE TRACKER:\nThis module consists of number of calories consumed by an individual for breakfast, lunch, evening snacks and dinner. Whatever an individual consumes for a meal has to be added in this module to calculate the calorie intake.</string>
+    <string name="water_tracker_text"> WATER TRACKER:\nIt keeps the track of number of glasses of water you drink in a day. The suggested number of glasses are 10 and each time you drink a glass of water, you have to increment the counter and the result will be shown on progress bar.</string>
+    <string name="account_details_text"> ACCOUNT DETAILS:\nThis consists of information to be fed like name, email, password and phone number.</string>
+    <string name="mental_wellness_text"> MENTAL WELLNES:\nThis module tells more about the importance of mental health and how it can achieved with the help of videos.</string>
+    <string name="reset_text"> RESET:\nIf an individual wants to restart the workout he can opt for reset option.</string>
+    <string name="logout_text"> LOGOUT:\nAn individual can logout from the app using this option.</string>
+
 </resources>

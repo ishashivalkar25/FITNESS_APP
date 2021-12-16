@@ -4,16 +4,39 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/drawable/circle.xml" value="0.2703125" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/WorkoutActivity.xml" value="0.15364583333333334" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_bicyclecrunch.xml" value="0.15364583333333334" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_bridge.xml" value="0.15364583333333334" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_calorie_tracker_page.xml" value="0.13177083333333334" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_chairsquat.xml" value="0.13177083333333334" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_completion.xml" value="0.175" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_day1.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_day2.xml" value="0.264" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_day7.xml" value="0.175" />
         <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_days.xml" value="0.17300724637681159" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_food_category_content.xml" value="0.13177083333333334" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_get_account_details.xml" value="0.175" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_help.xml" value="0.2" />
         <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_profile.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_resttime.xml" value="0.15364583333333334" />
         <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_sign_up.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/activity_water_tracker.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/app_bar_profile.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/content_profile.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/food_category_design.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/food_item_design.xml" value="0.15" />
         <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/fragment_account_details.xml" value="0.264" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/fragment_bottom_home.xml" value="0.15" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/fragment_diet_plan.xml" value="0.15" />
         <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/fragment_home.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/fragment_logout.xml" value="0.15" />
         <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/fragment_mental_wellness.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/fragment_reminders.xml" value="0.15" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/fragment_report.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/fragment_reset.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/nav_header_profile.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/layout/workout_activity.xml" value="0.13177083333333334" />
         <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/menu/activity_main_drawer.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Shruti/AndroidStudioProjects/FITNESS_APP/app/src/main/res/menu/profile_activity.xml" value="0.25416666666666665" />

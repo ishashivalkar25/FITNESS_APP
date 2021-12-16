@@ -1,4 +1,4 @@
-package com.example.fitnessapp.ui.home;
+package com.example.fitnessapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,17 +6,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.fitnessapp.DaysActivity;
 import com.example.fitnessapp.R;
+import com.example.fitnessapp.calorie_tracker_page;
 import com.example.fitnessapp.databinding.FragmentHomeBinding;
-import com.example.fitnessapp.profile_activity;
+import com.example.fitnessapp.ui.home.HomeViewModel;
 import com.example.fitnessapp.water_tracker;
 
 public class HomeFragment extends Fragment {
@@ -29,7 +28,6 @@ public class HomeFragment extends Fragment {
         homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
 
-
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         ImageButton workout = root.findViewById(R.id.workout);
@@ -40,6 +38,18 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(root.getContext(), water_tracker.class));
+            }
+        });
+        workout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               startActivity(new Intent(root.getContext(), DaysActivity.class));
+            }
+        });
+        calorie_tracker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(root.getContext(), calorie_tracker_page.class));
             }
         });
         return root;

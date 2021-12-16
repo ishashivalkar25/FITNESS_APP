@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF"
+    android:orientation="vertical"
+    tools:context=".Day3Activity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/black"
+        android:textAlignment="textEnd"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:title="WORKOUT DAY3"
+        app:titleTextColor="#FFF"
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:orientation="vertical"
+        >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/brigde1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="400dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1.0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:layout_height="wrap_content"
+                                android:background="@color/grey"
+                                android:fontFamily="monospace"
+                                android:text="EXERCISE 1 (30 seconds)"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:layout_height="wrap_content"
+                                android:background="@color/grey"
+                                android:fontFamily="monospace"
+                                android:text="bridge"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.0">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:layout_width="92dp"
+                                android:layout_height="62dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/bridge" />
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/start1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="START_1"
+                            android:textSize="18dp"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black"
+                        />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/chairsquat1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="400dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1.0"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="EXERCISE 2 (30 seconds)"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="CHAIR SQUAT"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.0">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:layout_width="99dp"
+                                android:layout_height="62dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/chairsquat" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/start2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="START_2"
+                            android:textSize="18dp"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/kneepushup1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="400dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1.0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="EXERCISE 3 (30 seconds)"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="KNEE PUSH UPS"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.0">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:layout_width="99dp"
+                                android:layout_height="62dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/kneepushup" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/start3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="START_3"
+                            android:textSize="18dp"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/stationarylunge1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="400dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1.0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="EXERCISE 4 (30 seconds)"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="STATIONARY LUNGE"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.0">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:layout_width="99dp"
+                                android:layout_height="62dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/stationarylunge" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/start4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="START_4"
+                            android:textSize="18dp"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/planktodownwarddog1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="400dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1.0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="EXERCISE 5 (30 seconds)"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="Plank to downward dog"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.0">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:layout_width="99dp"
+                                android:layout_height="62dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/planktodownwarddog" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/start5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="START_5"
+                            android:textSize="18dp"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/straightlegdonkeykick1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="400dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1.0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="EXERCISE 6 (30 seconds)"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="straight-leg donkey kick"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.0">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:layout_width="99dp"
+                                android:layout_height="62dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/straightlegdonkeykick" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/start6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="START_6"
+                            android:textSize="18dp"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/birddog1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="400dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1.0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="EXERCISE 7 (30 seconds)"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="Bird dog"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.0">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:layout_width="99dp"
+                                android:layout_height="62dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/birddog" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/start7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="START_7"
+                            android:textSize="18dp"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/forearmplank1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="400dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1.0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="EXERCISE 8 (30 seconds)"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="fore arm plank"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.0">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:layout_width="99dp"
+                                android:layout_height="62dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/forearmplank" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/start8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="START_8"
+                            android:textSize="18dp"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/slha1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="400dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1.0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="EXERCISE 9 (30 seconds)"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="side lying hip abduction"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.0">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:layout_width="99dp"
+                                android:layout_height="62dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/sidelyinghipabduction" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/start9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="START_9"
+                            android:textSize="18dp"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/wallsquat1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="400dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1.0"
+                            android:orientation="vertical">
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/black" />
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="EXERCISE 10 (30 seconds)"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="271dp"
+                                android:background="@color/grey"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="wall squat"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.0">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:layout_width="99dp"
+                                android:layout_height="62dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/wallsquat" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/start10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="START_10"
+                            android:textSize="18dp"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
