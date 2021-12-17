@@ -14,10 +14,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import org.jetbrains.annotations.NotNull;
 
 //login page
 public class MainActivity extends AppCompatActivity {
@@ -30,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView userRegistration;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
+    User user ;
+    String flag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         Info = (TextView)findViewById(R.id.tvInfo);
         Login = (Button)findViewById(R.id.btnLogin);
         userRegistration = (TextView)findViewById(R.id.tvRegister);
+
 
         Info.setText("No of attempts remaining: 5");
 
@@ -78,9 +86,50 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     progressDialog.dismiss();
-                    //Log.i("loginAuth",userName + " "+ Password+ " 1");
-                    startActivity(new Intent(MainActivity.this, GetAccountDetails.class));
+                    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+                    String userId = firebaseAuth.getCurrentUser().getUid();
+
+//                    db.collection("userData").document(userId).get()
+//                            .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//                                @Override
+//                                public void onSuccess(@NonNull @NotNull DocumentSnapshot documentSnapshot) {
+//                                    user= documentSnapshot.toObject(User.class);
+//                                    if(user.isFlag())
+//                                    {
+//                                        Intent intent = new Intent(MainActivity.this, GetAccountDetails.class);
+//                                        intent.putExtra("Email",userName);
+//                                        intent.putExtra("Password",Password);
+//                                        startActivity(intent);
+//                                    }
+//                                    else
+//                                    {
+//                                        startActivity(new Intent(MainActivity.this, profile_activity.class));
+//                                    }
+//                                    Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+//                                }
+//                            });
+                    Bundle extras = getIntent().getExtras();
+                    if (extras == null) {
+                       flag="false";
+                    }
+                    else
+                    {
+                        flag = extras.getString("Flag");
+                    }
+                    if(flag.equalsIgnoreCase("true"))
+                    {
+                        Intent intent = new Intent(MainActivity.this, GetAccountDetails.class);
+                        intent.putExtra("Email",userName);
+                        intent.putExtra("Password",Password);
+                        startActivity(intent);
+                    }
+                    else
+                    {
+                        startActivity(new Intent(MainActivity.this, profile_activity.class));
+                    }
                     Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+
                 }else
                 {
                     Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();

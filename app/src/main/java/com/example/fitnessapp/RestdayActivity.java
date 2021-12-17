@@ -18,8 +18,9 @@ public class RestdayActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent10 = new Intent(getApplicationContext(),DaysActivity.class);
-                startActivity(intent10);
+                Intent intent = new Intent(getApplicationContext(),DaysActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

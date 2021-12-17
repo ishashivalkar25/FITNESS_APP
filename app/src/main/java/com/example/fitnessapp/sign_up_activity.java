@@ -40,10 +40,12 @@ public class sign_up_activity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 //sendEmailVerification();
-                                firebaseAuth.signOut();
                                 Toast.makeText(sign_up_activity.this, "Successfully Registered, Upload complete!", Toast.LENGTH_SHORT).show();
+                                firebaseAuth.signOut();
                                 finish();
-                                startActivity(new Intent(sign_up_activity.this, MainActivity.class));
+                                Intent intent = new Intent(sign_up_activity.this, MainActivity.class);
+                                intent.putExtra("Flag","true");
+                                startActivity(intent);
                             }else{
                                 Toast.makeText(sign_up_activity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
                             }
@@ -60,7 +62,6 @@ public class sign_up_activity extends AppCompatActivity {
         });
     }
     private void setupUIViews(){
-        userName = (EditText)findViewById(R.id.etUserName);
         userPassword = (EditText)findViewById(R.id.etUserPassword);
         userEmail = (EditText)findViewById(R.id.etUserEmail);
         regButton = (Button)findViewById(R.id.btnRegister);
@@ -69,11 +70,9 @@ public class sign_up_activity extends AppCompatActivity {
     }
     private Boolean validate(){
         Boolean result = false;
-
-        String name = userName.getText().toString();
         String password = userPassword.getText().toString();
         String email = userEmail.getText().toString();
-        if(name.isEmpty() || password.isEmpty() || email.isEmpty()){
+        if(password.isEmpty() || email.isEmpty()){
             Toast.makeText(this, "Please enter all the details", Toast.LENGTH_SHORT).show();
         }else{
             result = true;

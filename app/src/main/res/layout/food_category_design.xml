@@ -22,36 +22,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/calories_cal"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:text="TextView"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Food_category_name"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/calories_cal"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:cardCornerRadius="30dp"
-        >
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/add_items_of_category"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:scaleType="centerCrop"
             android:background="@drawable/plus_sign"
-            />
+            android:scaleType="centerCrop" />
 
     </androidx.cardview.widget.CardView>
 

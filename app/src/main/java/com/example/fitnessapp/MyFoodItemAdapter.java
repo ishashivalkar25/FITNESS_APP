@@ -1,5 +1,6 @@
 package com.example.fitnessapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -28,6 +30,7 @@ public class MyFoodItemAdapter extends RecyclerView.Adapter<MyFoodItemAdapter.It
     FirebaseAuth firebaseAuth;
     String userID;
     User user;
+    Context context;
     public MyFoodItemAdapter(ArrayList<FoodItem> foodItemsList) {
         this.foodItemsList = foodItemsList;
     }
@@ -78,6 +81,7 @@ public class MyFoodItemAdapter extends RecyclerView.Adapter<MyFoodItemAdapter.It
             ICalPresent = itemView.findViewById(R.id.calorie_present);
             add_item_in_count=itemView.findViewById(R.id.add_item_in_count);
             delete_item_from_count=itemView.findViewById(R.id.delete_item_from_count);
+            context=itemView.getContext();
             add_item_in_count.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -85,7 +89,7 @@ public class MyFoodItemAdapter extends RecyclerView.Adapter<MyFoodItemAdapter.It
                    total_calories += Long.parseLong(ICalPresent.getText().toString());
                     user.setTotal_calories(total_calories);
                     db.collection("userData").document(userID).set(user);
-                    Log.i("total_calories",total_calories+"");
+                    Toast.makeText(context, "Item added successfully!!", Toast.LENGTH_SHORT).show();
                 }
             });
             delete_item_from_count.setOnClickListener(new View.OnClickListener() {
@@ -95,7 +99,7 @@ public class MyFoodItemAdapter extends RecyclerView.Adapter<MyFoodItemAdapter.It
                     total_calories -= Long.parseLong(ICalPresent.getText().toString());
                     user.setTotal_calories(total_calories);
                     db.collection("userData").document(userID).set(user);
-                    Log.i("total_calories",total_calories+"");
+                    Toast.makeText(context, "Item removed successfully!!", Toast.LENGTH_SHORT).show();
                 }
             });
         }

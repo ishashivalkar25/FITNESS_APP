@@ -1,5 +1,6 @@
 package com.example.fitnessapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -9,12 +10,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import org.jetbrains.annotations.NotNull;
+
 public class StldkActivity extends AppCompatActivity {
 
     private Chronometer chrono;
     private long pauseOffset;
     private boolean running;
     Button skip;
+    FirebaseFirestore db;
+    String userId ;
+    User user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +38,24 @@ public class StldkActivity extends AppCompatActivity {
         chrono.setFormat("     %s");
         running = true;
 
+        userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        db = FirebaseFirestore.getInstance();
+        db.collection("userData").document(userId).get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(@NonNull @NotNull DocumentSnapshot documentSnapshot) {
+                        user = documentSnapshot.toObject(User.class);
+                    }
+                });
+
+
         chrono.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
             @Override
             public void onChronometerTick(Chronometer chronometer) {
                 long elapsed = SystemClock.elapsedRealtime() - chronometer.getBase();
                 if (elapsed >= 31000) {
+                    user.setTotal_no_of_exercise(user.getTotal_no_of_exercise()+1);
+                    db.collection("userData").document(userId).set(user);
                     finish();
                 }
             }

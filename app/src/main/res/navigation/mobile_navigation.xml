@@ -22,21 +22,6 @@
         android:label="@string/menu_mental_wellness"
         tools:layout="@layout/fragment_mental_wellness" />
     <fragment
-        android:id="@+id/reminders"
-        android:name="com.example.fitnessapp.Reminders"
-        android:label="@string/menu_reminders"
-        tools:layout="@layout/fragment_reminders" />
-    <fragment
-        android:id="@+id/logout"
-        android:name="com.example.fitnessapp.Logout"
-        android:label="@string/menu_logout"
-        tools:layout="@layout/fragment_logout" />
-    <fragment
-        android:id="@+id/reset2"
-        android:name="com.example.fitnessapp.Reset"
-        android:label="@string/menu_reset"
-        tools:layout="@layout/fragment_reset" />
-    <fragment
         android:id="@+id/dietPlan"
         android:name="com.example.fitnessapp.DietPlan"
         android:label="@string/menu_diet_plan"

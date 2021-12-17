@@ -5,19 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".calorie_tracker_page"
-    android:background="@drawable/calorie_tracker_background">
+    android:background="@drawable/calorie_bg">
+
 
     <ProgressBar
-    android:id="@+id/progress_bar_cal"
-    android:layout_width="200dp"
-    android:layout_height="200dp"
-    android:indeterminateOnly="false"
-    android:progressDrawable="@drawable/circle"
-    tools:progress="60"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/progress_bar_cal"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.13"
+        tools:progress="60" />
 
     <TextView
         android:id="@+id/text_view_progress_cal"
@@ -28,6 +31,7 @@
         app:layout_constraintEnd_toEndOf="@+id/progress_bar_cal"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/progress_bar_cal"
+        android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="@+id/progress_bar_cal"
         app:layout_constraintVertical_bias="0.494"
         tools:text="60%" />
@@ -35,15 +39,29 @@
     <TextView
         android:id="@+id/info_cal"
         android:layout_width="wrap_content"
-        android:layout_height="28dp"
-        android:layout_marginTop="300dp"
-        android:text="text"
+        android:layout_height="wrap_content"
+        android:text="No. of Calories Consumed"
         android:textAlignment="center"
         android:textColor="@color/black"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.325"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar_cal"
+        app:layout_constraintVertical_bias="0.243" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Calorie Tracker"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

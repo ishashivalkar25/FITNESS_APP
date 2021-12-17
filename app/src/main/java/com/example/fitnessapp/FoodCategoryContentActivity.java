@@ -35,7 +35,6 @@ public class FoodCategoryContentActivity extends AppCompatActivity {
     User user;
     ProgressDialog progressDialog;
     String food_category;
-    long total_calories;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,30 +58,6 @@ public class FoodCategoryContentActivity extends AppCompatActivity {
 
         Log.i("Current User", current_user);
         db = FirebaseFirestore.getInstance();
-        db.collection("userData").document(current_user).get()
-                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                    @Override
-                    public void onSuccess(@NonNull @NotNull DocumentSnapshot documentSnapshot) {
-                        user = documentSnapshot.toObject(User.class);
-                        TextView total_calories_counted_text = findViewById(R.id.total_calories_counted_text);
-                        TextView total_calories_counted = findViewById(R.id.total_calories_counted);
-
-                        if (food_category.equalsIgnoreCase("Breakfast")) {
-                            total_calories_counted_text.setText("Total Calories Consumed ( Breakfast )");
-                            total_calories_counted.setText(user.getBreakfast_calories() + "Cal");
-                        } else if (food_category.equalsIgnoreCase("Lunch")) {
-                            total_calories_counted_text.setText("Total Calories Consumed ( Lunch )");
-                            total_calories_counted.setText(user.getLunch_calories() + "Cal");
-                        } else if (food_category.equalsIgnoreCase("Evening Snacks")) {
-                            total_calories_counted_text.setText("Total Calories Consumed ( Evening Snacks )");
-                            total_calories_counted.setText(user.getEvening_snacks_calories() + "Cal");
-                        } else {
-                            total_calories_counted_text.setText("Total Calories Consumed ( Dinner )");
-                            total_calories_counted.setText(user.getDinner_calories() + "Cal");
-                        }
-
-                    }
-                });
 
 
         initRecyclerView();

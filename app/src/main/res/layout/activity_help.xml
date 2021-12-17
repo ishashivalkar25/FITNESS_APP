@@ -27,7 +27,7 @@
             android:layout_margin="15dp"
             android:layout_gravity="center"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:padding="10dp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="131dp"
@@ -41,7 +41,7 @@
             android:layout_margin="15dp"
             android:padding="10dp"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="20sp"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="92dp" />
 
@@ -53,7 +53,7 @@
             android:layout_margin="15dp"
             android:padding="10dp"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="20sp"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="189dp" />
 
@@ -65,7 +65,7 @@
             android:layout_margin="15dp"
             android:padding="10dp"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="20sp"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="269dp" />
 
@@ -77,7 +77,7 @@
             android:layout_margin="15dp"
             android:padding="10dp"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="20sp"
             tools:layout_editor_absoluteX="123dp"
             tools:layout_editor_absoluteY="290dp" />
 
@@ -89,7 +89,7 @@
             android:layout_margin="15dp"
             android:textColor="@color/black"
             android:padding="10dp"
-            android:textSize="25sp"
+            android:textSize="20sp"
             tools:layout_editor_absoluteX="148dp"
             tools:layout_editor_absoluteY="366dp" />
 
@@ -100,7 +100,7 @@
                 android:layout_margin="15dp"
                 android:textColor="@color/black"
                 android:padding="10dp"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -109,7 +109,7 @@
                 android:layout_margin="15dp"
                 android:textColor="@color/black"
                 android:padding="10dp"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -118,7 +118,7 @@
                 android:layout_margin="15dp"
                 android:textColor="@color/black"
                 android:padding="10dp"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -127,7 +127,7 @@
                 android:layout_margin="15dp"
                 android:textColor="@color/black"
                 android:padding="10dp"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
 </LinearLayout>
     </ScrollView>

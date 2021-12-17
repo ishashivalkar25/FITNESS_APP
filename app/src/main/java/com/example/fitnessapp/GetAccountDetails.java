@@ -28,14 +28,15 @@ public class GetAccountDetails extends AppCompatActivity {
 
     private EditText userName,userPassword, userEmail,age,gender,height,weight;
     private Button save_profile_details;
+    String email="",password="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_account_details);
-
-
-
         // Create a new user with a first and last name
+
+        email = getIntent().getStringExtra("Email");
+        password = getIntent().getStringExtra("Password");
 
         userName=findViewById(R.id.etUserName);
         age=findViewById(R.id.age);
@@ -56,12 +57,14 @@ public class GetAccountDetails extends AppCompatActivity {
                 long user_weight=Long.parseLong(weight.getText().toString().trim());
 
                 User user = new User();
+                user.setFlag(false);
                 user.setName(user_name);
                 user.setAge(user_age);
                 user.setGender(user_gender);
                 user.setHeight(user_height);
                 user.setWeight(user_weight);
-                user.setBmi(0);
+                long bmi = (long)(user_weight/(user_height*user_height*100.0));
+                user.setBmi(bmi);
                 user.setBreakfast_calories(0);
                 user.setLunch_calories(0);
                 user.setEvening_snacks_calories(0);
@@ -70,8 +73,8 @@ public class GetAccountDetails extends AppCompatActivity {
                 user.setNo_of_glasses_water_intake(0);
                 user.setTotal_duration_of_exercises(0);
                 user.setTotal_no_of_exercise(0);
-                user.setPassword("");
-                user.setEmail("");
+                user.setPassword(password);
+                user.setEmail(email);
                 user.setTotal_calories_burned(0);
                 user.setTotal_calories_burned(0);
 

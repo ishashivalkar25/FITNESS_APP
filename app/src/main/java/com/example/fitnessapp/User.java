@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class User {
 
+    boolean flag;
     String name;
     String email,password;
     long height,weight,bmi,age;
@@ -15,6 +16,14 @@ public class User {
 
     public long getAge() {
         return age;
+    }
+
+    public boolean isFlag() {
+        return flag;
+    }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
     }
 
     public ArrayList<String> getExercises_done() {
