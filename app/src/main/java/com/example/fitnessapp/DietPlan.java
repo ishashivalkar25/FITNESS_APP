@@ -66,11 +66,25 @@ public class DietPlan extends Fragment {
     }
 
     private void initData() {
+
         foodCategoryListItem = new ArrayList<FoodCategoryList>();
-        foodCategoryListItem.add(new FoodCategoryList("Breakfast",0,100));
-        foodCategoryListItem.add(new FoodCategoryList("Lunch",0,100));
-        foodCategoryListItem.add(new FoodCategoryList("Evening Snacks",0,100));
-        foodCategoryListItem.add(new FoodCategoryList("Dinner",0,100));
+        FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
+        FirebaseFirestore db=FirebaseFirestore.getInstance();
+        String userID=firebaseAuth.getCurrentUser().getUid();
+
+        db.collection("userData").document(userID).get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(@NonNull @NotNull DocumentSnapshot documentSnapshot) {
+                        User user = documentSnapshot.toObject(User.class);
+                        foodCategoryListItem.add(new FoodCategoryList("Breakfast",user.getBreakfast_calories(),100));
+                        foodCategoryListItem.add(new FoodCategoryList("Lunch",user.getLunch_calories(),100));
+                        foodCategoryListItem.add(new FoodCategoryList("Evening Snacks",user.getEvening_snacks_calories(),100));
+                        foodCategoryListItem.add(new FoodCategoryList("Dinner",user.getDinner_calories(),100));
+                        myListAdapter.notifyDataSetChanged();
+                    }
+                });
+
     }
 
     @Override

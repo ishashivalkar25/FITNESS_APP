@@ -54,15 +54,13 @@ public class FoodCategoryContentActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
         firebaseAuth = FirebaseAuth.getInstance();
-        String current_user = firebaseAuth.getCurrentUser().getUid();
+        String userId = firebaseAuth.getCurrentUser().getUid();
 
-        Log.i("Current User", current_user);
+        Log.i("Current User", userId);
         db = FirebaseFirestore.getInstance();
-
 
         initRecyclerView();
         fetchData();
-
     }
 
     private void fetchData() {
@@ -93,7 +91,7 @@ public class FoodCategoryContentActivity extends AppCompatActivity {
         linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
-        myFoodItemAdapter = new MyFoodItemAdapter(foodItemsList);
+        myFoodItemAdapter = new MyFoodItemAdapter(foodItemsList,food_category);
         recyclerView.setAdapter(myFoodItemAdapter);
         myFoodItemAdapter.notifyDataSetChanged();
     }

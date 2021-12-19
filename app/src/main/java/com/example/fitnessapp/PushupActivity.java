@@ -27,8 +27,6 @@ public class PushupActivity extends AppCompatActivity {
     String userId ;
     User user;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

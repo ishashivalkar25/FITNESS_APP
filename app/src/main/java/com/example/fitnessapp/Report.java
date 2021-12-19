@@ -1,5 +1,6 @@
 package com.example.fitnessapp;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -23,6 +24,7 @@ public class Report extends Fragment {
     User user;
     String userId="";
     TextView duration_text,exercise_text,calorie_present_text,height_text,weight_text,bmi_text;
+    ProgressDialog progressDialog;
     public Report() {
         // Required empty public constructor
     }
@@ -51,10 +53,19 @@ public class Report extends Fragment {
         weight_text = view.findViewById(R.id.weight_text);
         bmi_text = view.findViewById(R.id.bmi_text);
 
+        progressDialog = new ProgressDialog(view.getContext());
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Fetching Data ....");
+        progressDialog.show();
+
         db.collection("userData").document(userId).get()
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(@NonNull @NotNull DocumentSnapshot documentSnapshot) {
+                        if(progressDialog.isShowing())
+                        {
+                            progressDialog.dismiss();
+                        }
                         user = documentSnapshot.toObject(User.class);
                         duration_text.setText((user.getTotal_no_of_exercise()*30)+" seconds");
                         exercise_text.setText(user.getTotal_no_of_exercise()+"");
@@ -62,7 +73,7 @@ public class Report extends Fragment {
                         height_text.setText(user.getHeight()+"");
                         weight_text.setText(user.getWeight()+"");
                         double bmi = ((double)user.getWeight()*10000)/(user.getHeight()*user.getHeight());
-                        bmi_text.setText(bmi+"");
+                        bmi_text.setText(String.format("%.2f",bmi));
                     }
                 });
         return view;

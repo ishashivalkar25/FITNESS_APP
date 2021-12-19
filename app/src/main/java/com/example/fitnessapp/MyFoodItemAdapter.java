@@ -30,9 +30,12 @@ public class MyFoodItemAdapter extends RecyclerView.Adapter<MyFoodItemAdapter.It
     FirebaseAuth firebaseAuth;
     String userID;
     User user;
+    private String food_category;
+
     Context context;
-    public MyFoodItemAdapter(ArrayList<FoodItem> foodItemsList) {
+    public MyFoodItemAdapter(ArrayList<FoodItem> foodItemsList,String food_category) {
         this.foodItemsList = foodItemsList;
+        this.food_category = food_category;
     }
 
     @NonNull
@@ -85,9 +88,10 @@ public class MyFoodItemAdapter extends RecyclerView.Adapter<MyFoodItemAdapter.It
             add_item_in_count.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                   total_calories=user.getTotal_calories();
-                   total_calories += Long.parseLong(ICalPresent.getText().toString());
+                    total_calories=user.getTotal_calories();
+                    total_calories += Long.parseLong(ICalPresent.getText().toString());
                     user.setTotal_calories(total_calories);
+                    addCountOfCalorieCategoryWise(Long.parseLong(ICalPresent.getText().toString()));
                     db.collection("userData").document(userID).set(user);
                     Toast.makeText(context, "Item added successfully!!", Toast.LENGTH_SHORT).show();
                 }
@@ -98,6 +102,7 @@ public class MyFoodItemAdapter extends RecyclerView.Adapter<MyFoodItemAdapter.It
                     total_calories=user.getTotal_calories();
                     total_calories -= Long.parseLong(ICalPresent.getText().toString());
                     user.setTotal_calories(total_calories);
+                    addCountOfCalorieCategoryWise(Long.parseLong(ICalPresent.getText().toString()));
                     db.collection("userData").document(userID).set(user);
                     Toast.makeText(context, "Item removed successfully!!", Toast.LENGTH_SHORT).show();
                 }
@@ -111,5 +116,25 @@ public class MyFoodItemAdapter extends RecyclerView.Adapter<MyFoodItemAdapter.It
             //Log.i("data123",item_name+" "+item_description+" "+item_calorie_present);
         }
 
+        public void addCountOfCalorieCategoryWise(long added_calories)
+        {
+            if(food_category.equalsIgnoreCase("breakfast"))
+            {
+                user.setBreakfast_calories(user.getBreakfast_calories()+added_calories);
+            }
+            else if(food_category.equalsIgnoreCase("lunch"))
+            {
+                user.setLunch_calories(user.getLunch_calories()+added_calories);
+            }
+            else if(food_category.equalsIgnoreCase("Evening Snacks"))
+            {
+                user.setEvening_snacks_calories(user.getEvening_snacks_calories()+added_calories);
+            }
+            else
+            {
+                user.setDinner_calories(user.getDinner_calories()+added_calories);
+            }
+
+        }
     }
 }

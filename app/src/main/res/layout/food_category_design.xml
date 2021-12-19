@@ -3,21 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:padding="5dp"
-    android:background="@color/design_default_color_primary"
-    android:layout_margin="5dp"
+    android:layout_height="150dp"
+    android:background="@drawable/bg_layout"
+    android:backgroundTint="#cfb3e3"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
     android:elevation="36dp"
-    >
+    android:padding="5dp">
 
     <TextView
         android:id="@+id/Food_category_name"
-        android:layout_width="150dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:background="@drawable/card_background"
         android:text="TextView"
-        android:textSize="18dp"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +29,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
         app:cardCornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +44,29 @@
 
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:id="@+id/calories_consumed_under_category"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text=""
+        android:textSize="18dp"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/design_default_color_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Food_category_name"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Cal"
+        android:textSize="18dp"
+        android:textColor="@color/design_default_color_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calories_consumed_under_category"
+        app:layout_constraintTop_toTopOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
