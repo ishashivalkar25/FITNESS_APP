@@ -107,7 +107,7 @@ public class water_tracker extends AppCompatActivity {
     }
     private void updateProgressBar(){
         progress_bar.setProgress((int)progr);
-        text_view_progress.setText(progr+"%");
+        text_view_progress.setText(String.format("%.2f",progr)+"%");
         if(progr==100){
             Toast.makeText(water_tracker.this, "Completed your water goal today", Toast.LENGTH_SHORT).show();
         }
