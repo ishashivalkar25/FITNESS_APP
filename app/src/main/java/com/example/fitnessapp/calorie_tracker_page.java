@@ -78,12 +78,10 @@ public class calorie_tracker_page extends AppCompatActivity {
                 });
 
 
-
-
     }
     private void updateProgressBar(){
         progress_bar.setProgress((int) progr);
-        text_view_progress.setText(progr+"%");
+        text_view_progress.setText(String.format("%.2f",progr)+"%");
 
     }
 }
