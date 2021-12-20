@@ -83,7 +83,7 @@ public class AccountDetails extends Fragment {
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(@NonNull @NotNull Void unused) {
-                                Toast.makeText(view.getContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(view.getContext(), "Account Details Updated Successfully!!", Toast.LENGTH_SHORT).show();
                             }
                         });
             }
