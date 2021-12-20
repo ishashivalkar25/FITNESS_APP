@@ -25,7 +25,7 @@ public class AccountDetails extends Fragment {
     FirebaseFirestore db ;
     String userId;
     User user;
-    TextInputEditText name ,email , age, weight,height;
+    TextInputEditText name ,email , age, weight,height,gender;
     Button save;
     public AccountDetails() {
         // Required empty public constructor
@@ -50,6 +50,7 @@ public class AccountDetails extends Fragment {
         name = view.findViewById(R.id.name2);
         email = view.findViewById(R.id.email2);
         age = view.findViewById(R.id.age2);
+        gender = view.findViewById(R.id.gender2);
         weight = view.findViewById(R.id.weight2);
         height = view.findViewById(R.id.height2);
         save=view.findViewById(R.id.save_details);
@@ -65,6 +66,7 @@ public class AccountDetails extends Fragment {
                         name.setText(user.getName());
                         email.setText(user.getEmail());
                         age.setText(user.getAge()+"");
+                        gender.setText(user.getGender());
                         weight.setText(user.getWeight()+"");
                         height.setText(user.getHeight()+"");
                     }
@@ -74,6 +76,7 @@ public class AccountDetails extends Fragment {
             public void onClick(View v) {
                 user.setName(name.getText().toString().trim());
                 user.setAge(Long.parseLong(age.getText().toString().trim()));
+                user.setGender(gender.getText().toString().trim());
                 user.setWeight(Long.parseLong(weight.getText().toString().trim()));
                 user.setHeight(Long.parseLong(height.getText().toString().trim()));
                 db.collection("userData").document(userId).set(user)

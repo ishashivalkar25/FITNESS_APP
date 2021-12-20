@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -26,7 +27,8 @@ import java.util.Map;
 
 public class GetAccountDetails extends AppCompatActivity {
 
-    private EditText userName,userPassword, userEmail,age,gender,height,weight;
+    private EditText userName,userPassword, userEmail,age,height,weight;
+    Spinner gender ;
     private Button save_profile_details;
     String email="",password="";
     @Override
@@ -41,6 +43,7 @@ public class GetAccountDetails extends AppCompatActivity {
         userName=findViewById(R.id.etUserName);
         age=findViewById(R.id.age);
         gender=findViewById(R.id.gender);
+        gender.setSelection(0, false);
         height=findViewById(R.id.height);
         weight=findViewById(R.id.weight);
         save_profile_details = findViewById(R.id.save_profile_details);
@@ -52,7 +55,7 @@ public class GetAccountDetails extends AppCompatActivity {
                 String userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
                 String user_name=userName.getText().toString().trim();
                 long user_age = Long.parseLong(age.getText().toString().trim());
-                String user_gender=gender.getText().toString().trim();
+                String user_gender = (String)gender.getSelectedItem();
                 long user_height=Long.parseLong(height.getText().toString().trim());
                 long user_weight=Long.parseLong(weight.getText().toString().trim());
 

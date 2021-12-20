@@ -16,6 +16,11 @@
     <string name="menu_reset">Reset</string>
     <string name="menu_logout">Logout</string>
 
+    <string-array name="user_gender">
+        <item>Select Gender...</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
     <string name="menu_diet_plan">Diet Plan</string>
     <string name="menu_report">Report</string>
 

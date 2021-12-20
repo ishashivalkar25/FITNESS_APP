@@ -95,4 +95,12 @@ public class FoodCategoryContentActivity extends AppCompatActivity {
         recyclerView.setAdapter(myFoodItemAdapter);
         myFoodItemAdapter.notifyDataSetChanged();
     }
+
+//    @Override
+//    public void onBackPressed() {
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//        final DietPlan myFragment = new DietPlan();
+//        fragmentTransaction.add(R.id.nav_host_fragment_content_profile, myFragment).commit();
+//    }
 }

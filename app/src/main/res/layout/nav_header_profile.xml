@@ -14,22 +14,19 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="130dp"
-        android:layout_height="97dp"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
         android:contentDescription="@string/nav_header_desc"
-
-        app:srcCompat="@drawable/profile" />
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/applogo" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/nav_header_title"
+        android:text="Welcome to HEALTH TO YOU!!"
+        android:textSize="20dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/nav_header_subtitle" />
+
 </LinearLayout>
